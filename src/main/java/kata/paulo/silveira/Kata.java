@@ -1,6 +1,8 @@
 package kata.paulo.silveira;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Kata {
 
@@ -65,6 +67,14 @@ public class Kata {
 
         // Ordenar as perguntas pela quantidade de respostas
 
+        perguntas.sort(Comparator.comparing(
+                p -> p.getRespostas().size()
+        ));
+
+
+        System.out.println(perguntas);
+
+
         // List forEach usando interface Consumer para imprimir todas os títulos
 
         // E com lambda? fazer no forEach e no sort
@@ -75,12 +85,23 @@ public class Kata {
 
         // E os Streams?
 
+
+        List<String> resultado = perguntas.stream()
+                .filter(p -> p.getRespostas().size() > 2)
+                .map(p -> p.getAutor())
+                .collect(Collectors.toList());
+
         // Só os que tem mais de 2 respostas (filter), apenas a quantidade de respostas (map e mapToInt)
 
         // Collectors
 
         // Dado o nome de um autor, me dê a lista com as perguntas dele. (Collectors.grouping)
-
+        Map<String, Pergunta> collect = perguntas.stream()
+                .filter(p -> p.getRespostas().size() > 2)
+                .collect(Collectors.toMap(
+                        Pergunta::getAutor,
+                        Function.identity()
+                ));
         // Hora de brincar com o Java 8
 
 
