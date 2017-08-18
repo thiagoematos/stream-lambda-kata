@@ -118,19 +118,6 @@ public class UtilTest {
     }
 
     @Test
-    public void shouldPartitionAdults() {
-        Person duke = new Person("Duke", 10);
-        Person fred = new Person("Fred", 28);
-        Person john = new Person("John", 45);
-        List<Person> input = asList(duke, fred, john);
-
-        Map<Boolean, List<Person>> result = Util.partitionAdults(input);
-
-        assertThat(result.get(true), containsInAnyOrder(fred, john));
-        assertThat(result.get(false), containsInAnyOrder(duke));
-    }
-
-    @Test
     public void shouldPartitionByNationality() {
         Person duke = new Person("Duke", 10, "USA");
         Person fred = new Person("Fred", 28, "Norway");
@@ -141,5 +128,18 @@ public class UtilTest {
 
         assertThat(result.get("USA"), containsInAnyOrder(duke));
         assertThat(result.get("Norway"), containsInAnyOrder(fred, john));
+    }
+
+    @Test
+    public void shouldPartitionAdults() {
+        Person duke = new Person("Duke", 10);
+        Person fred = new Person("Fred", 28);
+        Person john = new Person("John", 45);
+        List<Person> input = asList(duke, fred, john);
+
+        Map<Boolean, List<Person>> result = Util.partitionAdults(input);
+
+        assertThat(result.get(true), containsInAnyOrder(fred, john));
+        assertThat(result.get(false), containsInAnyOrder(duke));
     }
 }
