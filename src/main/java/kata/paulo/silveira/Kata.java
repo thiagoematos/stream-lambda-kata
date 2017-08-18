@@ -1,6 +1,6 @@
 package kata.paulo.silveira;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Kata {
 
@@ -43,6 +43,31 @@ public class Kata {
                         new Resposta("Pode não, você é meu amigo e deve me apoiar mesmo quando eu tiver errado"),
                         new Resposta("Você também manja de Java 8, fica aí e me ajuda, por favor")
                 ));
+
+        List<Pergunta> perguntas = Arrays.asList(p1, p2, p3, p4);
+
+        // Ordenar as perguntas pela quantidade de respostas
+
+        // List forEach usando interface Consumer para imprimir todas os títulos
+
+        // E com lambda? fazer no forEach e no sort
+
+        // Comparator.comparing
+
+        // Comparing usando Method Reference
+
+        // E os Streams?
+
+        // Só os que tem mais de 2 respostas (filter), apenas a quantidade de respostas (map e mapToInt)
+
+        // Collectors
+
+        // Dado o nome de um autor, me dê a lista com as perguntas dele. (Collectors.grouping)
+
+        // Hora de brincar com o Java 8
+
+
+
 
     }
 
