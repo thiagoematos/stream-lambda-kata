@@ -55,7 +55,13 @@ public class Kata {
                         new Resposta("Eita, tem uma mensagem subliminar aí")
                 ));
 
-        List<Pergunta> perguntas = Arrays.asList(p1, p2, p3, p4, p5);
+        Pergunta p6 = new Pergunta(
+                "Élen",
+                "E gatinho?",
+                "Quem quer adotar um gatinho?",
+                Collections.emptyList());
+
+        List<Pergunta> perguntas = Arrays.asList(p1, p2, p3, p4, p5, p6);
 
         // Ordenar as perguntas pela quantidade de respostas
 
