@@ -32,7 +32,7 @@ public class Kata {
                 Arrays.asList(
                         new Resposta("Você tá maluco"),
                         new Resposta("Você tá doidão"),
-                        new Resposta("O que é GULP?")
+                        new Resposta("GULP, GULP, GULP")
                 ));
 
         Pergunta p4 = new Pergunta(
@@ -44,7 +44,18 @@ public class Kata {
                         new Resposta("Você também manja de Java 8, fica aí e me ajuda, por favor")
                 ));
 
-        List<Pergunta> perguntas = Arrays.asList(p1, p2, p3, p4);
+        Pergunta p5 = new Pergunta(
+                "Lau",
+                "재미 있지 않습니다.",
+                "나는 모든 것을 이해하고 그것을 좋아하지 않습니다.",
+                Arrays.asList(
+                        new Resposta("??????"),
+                        new Resposta("Whaaaaat????"),
+                        new Resposta("Usa o google translator"),
+                        new Resposta("Eita, tem uma mensagem subliminar aí")
+                ));
+
+        List<Pergunta> perguntas = Arrays.asList(p1, p2, p3, p4, p5);
 
         // Ordenar as perguntas pela quantidade de respostas
 
