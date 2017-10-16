@@ -2,16 +2,16 @@ Roteiro
 ============
 - o que muda no dia-a-dia
 - Posso trocar?
-  - T· inst·vel
-  - … mais r·pido
-  - Diminuiu linhas de cÛdigo
-  - Fica mais legÌvel
-  - Evita problemas de concorrÍncia
+  - T√° inst√°vel
+  - √â mais r√°pido
+  - Diminuiu linhas de c√≥digo
+  - Fica mais leg√≠vel
+  - Evita problemas de concorr√™ncia
   - Usa Design Pattern de forma mais natural
-- O que s„o os lambda?
-  - Forma bonita de escrever classes anÙnimas
-  - Conceito matem·tico: C·lculo lambda
-  - ProgramaÁ„o Funcional: Os c·lculos dentro da funÁ„o sÛ podem ser feitos com os par‚metros dessa. Se ele fizer referÍncia a outra coisa, essa coisa tem que ser definida em uma express„o lambda tambÈm.
+- O que s√£o os lambda?
+  - Forma bonita de escrever classes an√¥nimas
+  - Conceito matem√°tico: C√°lculo lambda
+  - Programa√ß√£o Funcional: Os c√°lculos dentro da fun√ß√£o s√≥ podem ser feitos com os par√¢metros dessa. Se ele fizer refer√™ncia a outra coisa, essa coisa tem que ser definida em uma express√£o lambda tamb√©m.
 
 Dado uma lista de objetos, como imprimo somente um atributo de todos os itens dessa lista?
 
@@ -22,7 +22,7 @@ for(Classe itemDaLista: lista) {
 }
 '''
 
-D· para generalizar?
+D√° para generalizar?
 Design Pattern: Command
 '''
 interface Bloco {
@@ -34,6 +34,16 @@ Utilitario.forEach(lista, new Bloco() {
     }
 });
 '''
+
+Dado: Uma lista de perguntas e cada pergunta tem n respostas
+Desafios do dia-a-dia:
+- Quais perguntas tiveram mais respostas?
+  Collections.sort(perguntas, comparadorDeQuantidadeDeRespostasDeUmaPergunta);
+  Java 8
+  Na pr√≥pria lista j√° tem um m√©todo sort
+  perguntas.sort(comparadorDeQuantidadeDeRespostasDeUmaPergunta);
+  Como fizeram para adicionar um m√©todo novo na interface sem quebrar as implementa√ß√µes?
+  - default methods
 
 Code Kata for learning Java 8 Streams and Lambda
 =============
